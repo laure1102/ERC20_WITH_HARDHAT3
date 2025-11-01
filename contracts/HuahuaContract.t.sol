@@ -11,7 +11,7 @@ contract HuahuaContractTest is Test{
 
     HuahuaContract ctt;
 
-    uint256 initSupply;
+    uint256 constant initSupply = 2 * (10 ** 18);
     address constant alice = 0x6981b209E782CB754dc3fEebfdC11eA66bD71f00;
     address constant bob = 0x9D58A338A60Ca1861dd54D994955cd7453ddf7A2;
 
@@ -21,7 +21,6 @@ contract HuahuaContractTest is Test{
 
     function _reDeploy() internal{
         ctt = new HuahuaContract(initSupply);//初始化给owner创建2个token
-        initSupply = 2 * (10 ** ctt.decimals());
     }
 
     function testTokenName() public view{
