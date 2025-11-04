@@ -55,3 +55,10 @@ After setting the variable, you can run the deployment with the Sepolia network:
 ```shell
 npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
 ```
+
+### ignition deploy command
+ npx hardhat ignition deploy ignition/modules/DeploySepoliaGroup.ts --network sepolia
+
+### verify command
+ npx hardhat verify --network sepolia 0x9E2742ee25 args1
+ npx hardhat ignition deploy ignition/modules/DeploySepoliaGroup.ts --network sepolia --verify
